@@ -7,3 +7,12 @@ c:\users\sasha\documents\visual studio 2015\Projects\Andrew\Andrew\obj\Debug\And
 c:\users\sasha\documents\visual studio 2015\Projects\Andrew\Andrew\obj\Debug\Andrew.csproj.GenerateResource.Cache
 c:\users\sasha\documents\visual studio 2015\Projects\Andrew\Andrew\obj\Debug\Andrew.exe
 c:\users\sasha\documents\visual studio 2015\Projects\Andrew\Andrew\obj\Debug\Andrew.pdb
+C:\Users\Sasha\Documents\GitHub\Andrew\Andrew\bin\Debug\Andrew.exe.config
+C:\Users\Sasha\Documents\GitHub\Andrew\Andrew\obj\Debug\Andrew.exe
+C:\Users\Sasha\Documents\GitHub\Andrew\Andrew\obj\Debug\Andrew.pdb
+C:\Users\Sasha\Documents\GitHub\Andrew\Andrew\bin\Debug\Andrew.exe
+C:\Users\Sasha\Documents\GitHub\Andrew\Andrew\bin\Debug\Andrew.pdb
+C:\Users\Sasha\Documents\GitHub\Andrew\Andrew\obj\Debug\Andrew.csprojResolveAssemblyReference.cache
+C:\Users\Sasha\Documents\GitHub\Andrew\Andrew\obj\Debug\Andrew.Form1.resources
+C:\Users\Sasha\Documents\GitHub\Andrew\Andrew\obj\Debug\Andrew.Properties.Resources.resources
+C:\Users\Sasha\Documents\GitHub\Andrew\Andrew\obj\Debug\Andrew.csproj.GenerateResource.Cache
