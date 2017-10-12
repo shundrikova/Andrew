@@ -1,0 +1,9 @@
+c:\users\sasha\documents\visual studio 2015\Projects\Andrew\Andrew\bin\Debug\Andrew.exe.config
+c:\users\sasha\documents\visual studio 2015\Projects\Andrew\Andrew\bin\Debug\Andrew.exe
+c:\users\sasha\documents\visual studio 2015\Projects\Andrew\Andrew\bin\Debug\Andrew.pdb
+c:\users\sasha\documents\visual studio 2015\Projects\Andrew\Andrew\obj\Debug\Andrew.csprojResolveAssemblyReference.cache
+c:\users\sasha\documents\visual studio 2015\Projects\Andrew\Andrew\obj\Debug\Andrew.Form1.resources
+c:\users\sasha\documents\visual studio 2015\Projects\Andrew\Andrew\obj\Debug\Andrew.Properties.Resources.resources
+c:\users\sasha\documents\visual studio 2015\Projects\Andrew\Andrew\obj\Debug\Andrew.csproj.GenerateResource.Cache
+c:\users\sasha\documents\visual studio 2015\Projects\Andrew\Andrew\obj\Debug\Andrew.exe
+c:\users\sasha\documents\visual studio 2015\Projects\Andrew\Andrew\obj\Debug\Andrew.pdb
