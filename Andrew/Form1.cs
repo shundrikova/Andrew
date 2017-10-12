@@ -14,7 +14,6 @@ namespace Andrew
     public partial class Form1 : Form
     {
         private Pen pen;
-        //byte[] original;
         List<Point> points;
         List<Point> convex_hull;
 
@@ -23,6 +22,8 @@ namespace Andrew
             InitializeComponent();
         }
 
+        // знаковая площадь треугольника oab, 
+        // взятая со знаком плюс или минус в зависимости от типа поворота, образуемого точками
         private int cross(Point o, Point a, Point b)
         {
             return (a.X - o.X) * (b.Y - o.Y) - (a.Y - o.Y) * (b.X - o.X);
@@ -31,32 +32,41 @@ namespace Andrew
         private void Andrew()
         {
             if (points.Count < 3) return;
+            // сортируем список точек по X (если X равны, то по Y)
             var sorted_points = points.OrderBy(p => p.X).ThenBy(p => p.Y);
-            List<Point> up = new List<Point>();
-            List<Point> down = new List<Point>();
+            List<Point> up = new List<Point>(); // верхняя оболочка
+            List<Point> down = new List<Point>(); // нижняя оболочка
+            // самая левая и самая правая точки
             Point p1 = sorted_points.First(), p2 = sorted_points.Last();
             up.Add(p1);
             down.Add(p1);
             for (int i = 1; i < sorted_points.Count(); ++i)
             {
-                if (i == sorted_points.Count() - 1 || cross(p1, sorted_points.ElementAt(i), p2) < 0)
+                if (i == sorted_points.Count() - 1 || cross(p1, sorted_points.ElementAt(i), p2) < 0) //поворот по часовой стрелке
                 {
+                    // если текущая тройка точек образует не правый поворот, 
                     while (up.Count >= 2 && cross(up[up.Count - 2], up[up.Count - 1], sorted_points.ElementAt(i)) >= 0)
+                        // то ближайшего соседа нужно удалить
                         up.RemoveAt(up.Count - 1);
+                    // добавляем точку в оболочку
                     up.Add(sorted_points.ElementAt(i));
                 }
-                if (i == sorted_points.Count() - 1 || cross(p1, sorted_points.ElementAt(i), p2) > 0)
+                if (i == sorted_points.Count() - 1 || cross(p1, sorted_points.ElementAt(i), p2) > 0) //поворот против часовой стрелки
                 {
                     while (down.Count >= 2 && cross(down[down.Count - 2], down[down.Count - 1], sorted_points.ElementAt(i)) <= 0)
                         down.RemoveAt(down.Count - 1);
                     down.Add(sorted_points.ElementAt(i));
                 }
             }
+            //удаляем последнюю точку верхней оболочки и первую нижней (каждая есть в другом листе)
+            up.RemoveAt(up.Count - 1);
+            down.RemoveAt(0);            
+            // сливаем оболочки
             for (int i = 0; i < up.Count; ++i)
-                if(!convex_hull.Contains(up[i]))
+                //if(!convex_hull.Contains(up[i]))
                     convex_hull.Add(up[i]);
             for (int i = down.Count - 1; i >= 0; --i)
-                if (!convex_hull.Contains(down[i]))
+                //if (!convex_hull.Contains(down[i]))
                     convex_hull.Add(down[i]);
         }
 
